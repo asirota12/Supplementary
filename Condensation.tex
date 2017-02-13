@@ -1,0 +1,60 @@
+\documentclass[aps,prl,onecolumn,superscriptaddress,floatfix,12pt,letterpaper,showpacs]{revtex4-1}
+
+\usepackage{amsmath,amssymb,amsfonts,stmaryrd,wasysym,graphicx,multirow,color,textcomp}
+\usepackage{url}%\usepackage{diagrams}
+\usepackage[colorlinks=true,citecolor=blue,urlcolor=blue]{hyperref}
+
+\newcommand{\TI}{\hyperlink{TI}{TI} }
+\newcommand{\FTI}{\hyperlink{FTI}{FTI} }
+\newcommand{\TR}{\hyperlink{TR}{TR} }
+\newcommand{\QP}{\hyperlink{QP}{QP} }
+\newcommand{\TO}{\hyperlink{TO}{TO} }
+\newcommand{\FS}{\hyperlink{FS}{FS} }
+\newcommand{\SCS}{\hyperlink{SCS}{SCS} }
+\newcommand{\TPf}{\hyperlink{TPf}{$\mathcal{T}$-$\mathrm{Pf}^\ast$} }
+\newcommand{\CFT}{\hyperlink{CFT}{CFT} }
+\newcommand{\FQH}{\hyperlink{FQH}{FQH} }
+%\newcommand{\PZM}{\hyperlink{PZM}{PZM} }
+\newcommand{\MBS}{\hyperlink{MBS}{MBS} }
+
+
+\begin{document}
+
+\title{Condensation}
+
+\section{Condensation}
+
+When we glue the two \TR symmetric surfaces of a pair of $\mathrm{Pf}^\ast$ \FTI slabs and condense surface bosonic anyon pairs on the two \TPf surfaces, we left out some details. As before you take the decoupled tensor product of the anyons in two $\mathrm{Pf}^\ast$ \TO, denoted  $(\mathrm{Pf}^\ast)^A\otimes(\mathrm{Pf}^\ast)^B$ where $A,B$ refers to the two slabs. Then we choose a set of bosons that braid trivially around each other. We pick them to be neutral as to not break charge symmetry, and they are closed under \TR so that symmetry is intact as well. We pick this set \
+\
+\begin{align}
+	b=\left\{
+		\begin{array}{*{20}c}\openone^A_{4j}\openone^B_{-4j},\Psi^A_{4j}\Psi^B_{-4j},\openone^A_{4j+2}\Psi^B_{-4j-2},				\\\Psi^A_{4j+2}\openone^B_{-4j-2},\Sigma^A_{2j+1}\Sigma^B_{-2j-1}
+		\end{array}
+	\right\}.\label{bosons}
+\end{align}
+
+\
+\textcolor{red}{unsure about the motivation of picking this set}.\
+\
+ 
+%Show they are bosons that don't braid
+
+%end dont braid section
+
+%section that shows why we picked these
+You can see that the bosons are chosen so that $\openone_{4j},\Psi_{4j}$ and $\Sigma^A_{2j+1}$ can cross the condensed surface without changing anyon type. The procedure identifies each of these anyons in $b$ with the the vacuum $\openone^A_{0}\openone^B_{0}$, which cuts our theory down significantly. Then all anyons that are non-local with respect to and braid non-trivially around any of the bosons in $b$ are confined.
+
+%Show whats confined
+
+% gauge continuity
+ You can figure out the braiding statistics by the ribbon formula, $\theta_{A,B}=h_{A \times B}-h_A-h_B$. Anyon combinations $\tilde{X}^A_{j_a,z_a}\tilde{X}^B_{j_b,z_b}$ when braided around $\Psi^A_{4}\Psi^B_{-4}$ which carries a gauge charge $g^A \times -g^B$ has a contribution of $\frac{z_ag}{2n+1}-\frac{z_bg}{2n+1}$, which since $g$ and $2n+1$ are relatively prime is only non-zero if $z_a =z_b$ modulo 2n+1. The rest of the braiding phase can be shown to be trivial since $\Psi_4$  is a local in $(\mathcal{T}$-$\mathrm{Pf}^\ast)$, and you can write $\tilde{X}^A_{j_a,z_a}\tilde{X}^B_{j_b,z_b}$ as two $(\mathcal{T}$-$\mathrm{Pf}^\ast)$ , with gauge charge differences already 0 mod  2n + 1 particles with an extra gauge charge attached. Physically, this ensures gauge fluxes must continue through both $A$ and $B$ slabs, since the gauge flux can only change by a multiple of 2n +1, or equivalently all gauge monopoles at the interface are confined as they signify imbalances of gauge fluxes through the two slabs.
+
+%non abelian split
+ Moreover, all combinations that involve only $\Sigma^A$ or only $\Sigma^B$ are confined since they braid with $\Psi^A_0\Psi^B_0$. Other confined anyons include $\tilde\openone^A_{j_a,z}\tilde\openone^B_{j_b,z}$, $\tilde\Psi^A_{j_a,z}\tilde\Psi^B_{j_b,z}$, $\tilde\openone^A_{j_a+2,z}\tilde\Psi^B_{j_b-2,z}$, $\tilde\Psi^A_{j_a+2,z}\tilde\openone^B_{j_b-2,z}$ and $\tilde\Sigma^A_{j_a\pm1,z}\tilde\Sigma^B_{j_b\mp1,z}$ for $j_a\not\equiv j_b$ modulo 8. This is because they braid with\
+\
+\textcolor{red}{something maybe  $\openone^A_{4}\openone^B_{-4}$}.\
+\
+The remaining deconfined Ising pair splits into simpler Abelian components \begin{align}\tilde\Sigma^A_{j_a\pm1,z}\tilde\Sigma^B_{j_b\mp1,z}=S^+_{j_a\pm1,j_b\mp1,z}+S^-_{j_a\pm1,j_b\mp1,z},\end{align} where each $S^\pm$ carries the same spin as the original Ising pair but differs from each other by a unit fermion $S^\pm\times\Psi^{A/B}=S^\mp$. In general the two Abelian components are non-local with respect to each other. For instance, the \TR symmetric surface anyons $S^+$ and $S^-$ are mutually semionic when $j_a=j_b=0$ for $z=-n^3ug$. We choose to include $S^+$ in the condensate $b$ in \eqref{bosons} while confining $S^-$. Furthermore, the condensate identifies the deconfined anyons that are different up to bosons in $b$. \begin{align}\tilde\openone^A_{j_a,z}\tilde\openone^B_{j_b,z}&\equiv\tilde\Psi^A_{j_a,z}\tilde\Psi^B_{j_b,z}\equiv\tilde\Psi^A_{j_a+2,z}\tilde\openone^B_{j_b-2,z}\equiv\tilde\openone^A_{j_a+2,z}\tilde\Psi^B_{j_b-2,z}\nonumber\\&\equiv S^\pm_{j_a\pm1,j_b\mp1,z}\equiv\tilde\openone^A_{j_a+4,z}\tilde\openone^B_{j_b-4,z}\label{bulk}\end{align} for $j_a\equiv j_b$ mod 8 and $j_a,j_b$ both even. Among these, the anyons living on the \TR symmetric surface interface have dyon number $z=-n^3ug$ and are nothing but parton combinations. For instance, $\psi^A=\Psi^A_4\openone^B_0\equiv\openone^A_4\Psi^B_4=\psi^B$ which are now free to move inside both \FTI slabs after gluing. The new dyons $\gamma^z=\tilde\openone^A_{0,z}\tilde\openone^B_{0,z}$ consist of gauge fluxes that pass continuously across both slabs with gauge \QP of the same charge $a$ on each of the remaining top and bottom \TR breaking surfaces. The \TO after the gluing is generated by the partons and dyons, which behave identically as those in $\mathcal{F}$ of \eqref{FTIFSFS}. This proves \eqref{gluing}. The anyon condensation gluing of the pair of \TPf states preserves symmetries for the same reason it does for the conventional \TI case.
+%end confinement
+
+\end{document}
